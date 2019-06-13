@@ -1,0 +1,450 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<title>实习任务</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/spinner/ui.spinner.js"></script>
+<script type="text/javascript" src="js/plugins/spinner/jquery.mousewheel.js"></script>
+
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/charts/excanvas.min.js"></script>
+<script type="text/javascript" src="js/plugins/charts/jquery.flot.js"></script>
+<script type="text/javascript" src="js/plugins/charts/jquery.flot.orderBars.js"></script>
+<script type="text/javascript" src="js/plugins/charts/jquery.flot.pie.js"></script>
+<script type="text/javascript" src="js/plugins/charts/jquery.flot.resize.js"></script>
+<script type="text/javascript" src="js/plugins/charts/jquery.sparkline.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/forms/uniform.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.cleditor.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.validationEngine-en.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.tagsinput.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/autogrowtextarea.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.dualListBox.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.inputlimiter.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/chosen.jquery.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/wizard/jquery.form.js"></script>
+<script type="text/javascript" src="js/plugins/wizard/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/plugins/wizard/jquery.form.wizard.js"></script>
+
+<script type="text/javascript" src="js/plugins/uploader/plupload.js"></script>
+<script type="text/javascript" src="js/plugins/uploader/plupload.html5.js"></script>
+<script type="text/javascript" src="js/plugins/uploader/plupload.html4.js"></script>
+<script type="text/javascript" src="js/plugins/uploader/jquery.plupload.queue.js"></script>
+
+<script type="text/javascript" src="js/plugins/tables/datatable.js"></script>
+<script type="text/javascript" src="js/plugins/tables/tablesort.min.js"></script>
+<script type="text/javascript" src="js/plugins/tables/resizable.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/ui/jquery.tipsy.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.collapsible.min.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.progress.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.timeentry.min.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.colorpicker.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.jgrowl.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.breadcrumbs.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.sourcerer.js"></script>
+
+<script type="text/javascript" src="js/plugins/calendar.min.js"></script>
+<script type="text/javascript" src="js/plugins/elfinder.min.js"></script>
+
+<script type="text/javascript" src="js/custom.js"></script>
+
+<script type="text/javascript" src="js/charts/chart.js"></script>
+
+<!-- Shared on MafiaShare.net  --><!-- Shared on MafiaShare.net  --></head>
+
+<body>
+
+<!-- Left side content -->
+<div id="leftSide">
+    <div class="logo"><a href="#"><img src="images/logo1.png" alt="" width="150px"/></a></div>
+    
+    <div class="sidebarSep mt0"></div>
+    
+    <!-- Search widget -->
+    <form action="" class="sidebarSearch">
+        <input type="text" name="search" placeholder="搜索..." id="ac" />
+        <input type="submit" value="" />
+    </form>
+    
+    <div class="sidebarSep"></div>
+
+    <!-- Next update progress widget -->
+    <div class="nextUpdate">
+        <!-- <ul>
+            <li>下次更新时间在:</li>
+            <li>23 小时 14 分</li>
+        </ul> -->
+        <div class="pWrapper"><div class="progressG" title="78%"></div></div>
+    </div>
+    
+    <div class="sidebarSep"></div>
+    
+    <!-- Left navigation -->
+    <ul id="menu" class="nav">
+        <li class="dash"><a href="http://localhost:8080/index" title="" class="active"><span>首页</span></a></li>
+        <li class="charts"><a href="" title="" class="exp"><span>用户管理</span></a>
+            <ul class="sub">
+                <li><a href="http://localhost:8080/stu2" title="">个人资料</a></li>
+                <!-- <li><a href="门票管理.html" title="">门票券管理</a></li>
+                <li><a href="我的团队.html" title="">伞下的成员</a></li>
+                <li><a href="#" title="">注册下线会员</a></li>
+                <li class="last"><a href="#" title="">注销登录账号</a></li> -->
+            </ul>
+        </li>
+        <li class="forms"><a href="http://localhost:8080/stu3" title="" class="exp"><span>个人考勤</span><strong></strong></a>
+            <!-- <ul class="sub">
+                <li><a href="提供帮助记录.html" title="">提供帮助记录</a></li>
+                <li><a href="接受帮助记录.html" title="">接受帮助记录</a></li>
+                <li><a href="团队信息记录.html" title="">团队信息记录</a></li>
+                <li><a href="提供帮助所得利息.html" title="">提供帮助所得利息</a></li>
+                <li class="last"><a href="经理奖钱包记录.html" title="">经理奖钱包记录</a></li>
+            </ul> -->
+        </li>
+        <li class="ui"><a href="#" title="" class="exp"><span>实习任务</span></a>
+            <ul class="sub">
+                <li><a href="http://localhost:8080/stu4" title="">实习公司</a></li>
+                <li><a href="http://localhost:8080/stu4" title="">实习要求</a></li>
+                <!-- <li><a href="我的钱包.html" title="">推荐：￥150</a></li>
+                <li class="last"><a href="我的钱包.html" title="">积分：0分</a></li> -->
+            </ul>
+        </li>
+        <li class="tables"><a href="" title="" class="exp"><span>情况汇报</span><strong></strong></a>
+            <ul class="sub">
+                <li><a href="" title="http://localhost:8080/echarts3">周报</a></li>
+                <li><a href="http://localhost:8080/echarts3" title="">月总结</a></li>
+                <!-- <li class="last"><a href="我的资料.html" title="">手机：18200000000</a></li> -->
+            </ul>
+        </li>
+        <!-- <li class="widgets"><a href="#" title="" class="exp"><span>拆包大厅</span><strong></strong></a></li> -->
+    </ul>
+</div>
+
+
+<!-- Right side -->
+<div id="rightSide">
+
+    <!-- Top fixed navigation -->
+    <div class="topNav">
+        <div class="wrapper">
+            <div class="welcome"><a href="#" title=""><img src="images/userPic.png" alt="" /></a><span th:text="${msg}"></span></div>
+            <div class="userNav">
+                <ul>
+                    <li><a href="#" title=""><img src="images/icons/topnav/profile.png" alt="" /><span>个人中心</span></a></li>
+                    <li><a href="#" title=""><img src="images/icons/topnav/tasks.png" alt="" /><span>任务</span></a></li>
+                    <li class="dd"><a title=""><img src="images/icons/topnav/messages.png" alt="" /><span>消息</span><span class="numberTop">8</span></a>
+                        <ul class="userDropdown">
+                            <li><a href="#" title="" class="sAdd">new message</a></li>
+                            <li><a href="#" title="" class="sInbox">inbox</a></li>
+                            <li><a href="#" title="" class="sOutbox">outbox</a></li>
+                            <li><a href="#" title="" class="sTrash">trash</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="#" title=""><img src="images/icons/topnav/settings.png" alt="" /><span>设置</span></a></li> -->
+                    <li><a href="#" title=""><img src="images/icons/topnav/logout.png" alt="" /><span>退出</span></a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    
+    <!-- Responsive header -->
+    <div class="resp">
+        <div class="respHead">
+            <a href="#" title=""><img src="images/loginLogo.png" alt="" /></a>
+        </div>
+        
+        <div class="cLine"></div>
+        <div class="smalldd">
+            <span class="goTo"><img src="images/icons/light/home.png" alt="" />导航</span>
+            <ul class="smallDropdown">
+                <li><a href="#" title=""><img src="images/icons/light/home.png" alt="" />Dashboard</a></li>
+                <li><a href="#" title=""><img src="images/icons/light/stats.png" alt="" />Statistics and charts</a></li>
+                <li><a href="#" title="" class="exp"><img src="images/icons/light/pencil.png" alt="" />Forms stuff<strong>4</strong></a>
+                    <ul>
+                        <li><a href="#" title="">Form elements</a></li>
+                        <li><a href="#" title="">Validation</a></li>
+                        <li><a href="#" title="">WYSIWYG and file uploader</a></li>
+                        <li class="last"><a href="#" title="">Wizards</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title=""><img src="images/icons/light/users.png" alt="" />Interface elements</a></li>
+                <li><a href="#" title="" class="exp"><img src="images/icons/light/frames.png" alt="" />Tables<strong>3</strong></a>
+                    <ul>
+                        <li><a href="#" title="">Static tables</a></li>
+                        <li><a href="#" title="">Dynamic table</a></li>
+                        <li class="last"><a href="#" title="">Sortable &amp; resizable tables</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title="" class="exp"><img src="images/icons/light/fullscreen.png" alt="" />Widgets and grid<strong>2</strong></a>
+                    <ul>
+                        <li><a href="#" title="">Widgets</a></li>
+                        <li class="last"><a href="#" title="">Grid</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title="" class="exp"><img src="images/icons/light/alert.png" alt="" />Error pages<strong>6</strong></a>
+                    <ul class="sub">
+                        <li><a href="#" title="">403 page</a></li>
+                        <li><a href="#" title="">404 page</a></li>
+                        <li><a href="#" title="">405 page</a></li>
+                        <li><a href="#" title="">500 page</a></li>
+                        <li><a href="#" title="">503 page</a></li>
+                        <li class="last"><a href="#" title="">Website is offline</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title=""><img src="images/icons/light/files.png" alt="" />File manager</a></li>
+                <li><a href="#" title="" class="exp"><img src="images/icons/light/create.png" alt="" />Other pages<strong>3</strong></a>
+                    <ul>
+                        <li><a href="#" title="">Typography</a></li>
+                        <li><a href="#" title="">Calendar</a></li>
+                        <li class="last"><a href="#" title="">Gallery</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="cLine"></div>
+    </div>
+    
+    <!-- Title area -->
+    <div class="titleArea">
+        <div class="wrapper">
+            <div class="pageTitle">
+                <h5>实习项目</h5><br>
+                <!-- <h6>分享财富（T-4）</h6> -->
+                <span>实习者：<b th:text="${name}">&nbsp;&nbsp;</b> 所属地区：&nbsp;<b>上海市奉贤区&nbsp;&nbsp;</b> 所属学校：&nbsp;<b th:text="${school}">&nbsp;&nbsp;</b> 日期：&nbsp;<b id = 'date'>2019-05-22 13：20</b></span>
+            </div>
+            <div class="middleNav">
+                <ul>
+                   <!-- <li class="mUser"><a title=""><span class="users"></span></a>
+                        <ul class="mSub1">
+                            <li><a href="#" title="">Add user</a></li>
+                            <li><a href="#" title="">Statistics</a></li>
+                            <li><a href="#" title="">Orders</a></li>
+                        </ul>
+                    </li>
+                    <li class="mMessages"><a title=""><span class="messages"></span></a>
+                        <ul class="mSub2">
+                            <li><a href="#" title="">New tickets<span class="numberRight">8</span></a></li>
+                            <li><a href="#" title="">Pending tickets<span class="numberRight">12</span></a></li>
+                            <li><a href="#" title="">Closed tickets</a></li>
+                        </ul>
+                    </li>
+                    <li class="mFiles"><a href="#" title="Or you can use a tooltip" class="tipN"><span class="files"></span></a></li>
+                    <li class="mOrders"><a title=""><span class="orders"></span><span class="numberMiddle">8</span></a>
+                        <ul class="mSub4">
+                            <li><a href="#" title="">Pending uploads</a></li>
+                            <li><a href="#" title="">Statistics</a></li>
+                            <li><a href="#" title="">Trash</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    
+    <div class="line" style="display:none;"></div>
+    
+    <!-- Page statistics and control buttons area -->
+    <div class="statsRow" style="display:none;">
+        <div class="wrapper">
+        	<div class="controlB">
+            	<ul>
+                	<li><a href="#" title=""><img src="images/icons/control/32/plus.png" alt="" /><span>Add new session</span></a></li>
+                    <li><a href="#" title=""><img src="images/icons/control/32/database.png" alt="" /><span>New DB entry</span></a></li>
+                    <li><a href="#" title=""><img src="images/icons/control/32/hire-me.png" alt="" /><span>Add new user</span></a></li>
+                    <li><a href="#" title=""><img src="images/icons/control/32/statistics.png" alt="" /><span>Check statistics</span></a></li>
+                    <li><a href="#" title=""><img src="images/icons/control/32/comment.png" alt="" /><span>Review comments</span></a></li>
+                    <li><a href="#" title=""><img src="images/icons/control/32/order-149.png" alt="" /><span>Check orders</span></a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="line"></div>
+    
+    <!-- Main content wrapper -->
+    <div class="wrapper">
+    
+        <!-- Note -->
+        <div class="nNote nInformation hideit">
+            <p>亲爱的&nbsp;&nbsp;<strong th:text="${name}"> </strong><p th:text="${school}"></p>本月任务 <strong>20 </strong>次，考勤 <strong>10 </strong>次</p>
+        </div>
+
+        
+        <!-- Widgets -->
+        <div align="center">
+<table border="0" width="1220" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+  <tbody><tr>
+    <td width="5"></td>
+    <td valign="top">
+     
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+      <tbody><tr>
+        <td height="15" class="notitle" colspan="2"></td>
+      </tr>
+      <tr>
+        <td height="28" width="10%" class="notitle" align="center" bgcolor="#00b5c0"><font color="#FFFFFF"><b>企业要求</b></font></td>
+        <td height="28" width="90%" class="normal" valign="bottom"></td>
+      </tr>
+      <tr>
+        <td height="12" class="notitle" colspan="2"></td>
+      </tr>
+    </tbody></table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+      <tbody><tr>
+        <td valign="top" align="center">
+        <table width="95%" border="1" cellspacing="4" cellpadding="0" bordercolor="#E1F0FF">
+          <tbody><tr bgcolor="#E1F0FF"> 
+            <td height="30" colspan="4" align="center" class="notitle"><strong>公司资料</strong></td>
+          </tr>
+          <tr> 
+            <td width="11%" height="26" class="normal" align="right">公司名称：</td>
+            <td width="39%" height="26" class="normal">苏州恩普诺信息科技有限公司&nbsp;</td>
+            <td width="11%" height="26" class="normal" align="right">机 构 码：</td>
+            <td width="39%" height="26" class="normal">********</td>
+          </tr>
+          <tr>
+            <td height="26" class="normal" align="right">注册资本：</td>
+            <td height="26" class="normal">*********</td>
+            <td height="26" class="normal" align="right">联 系 人：</td>
+            <td height="26" class="normal">杜小姐&nbsp;</td>
+            </tr>
+          <tr> 
+            <td height="26" class="normal" align="right">联系电话：</td>
+            <td height="26" class="normal">未公开</td>
+            <td height="26" class="normal" align="right">传　　真：</td>
+            <td height="26" class="normal">&nbsp;</td>
+          </tr>
+          <tr> 
+            <td height="26" class="normal" align="right">电子邮件：</td>
+            <td height="26" class="normal"><a href="mailto:hr@empro-china.com">hr@empro-china.com</a></td>
+            <td height="26" class="normal" align="right">单位网址：</td>
+            <td height="26" class="normal"><a href="http://" target="_blank"></a>&nbsp;</td>
+          </tr>
+          <tr> 
+            <td height="26" class="normal" align="right">单位地址：</td>
+            <td height="26" class="normal">上海市宝山区长江南路180号长江软件园B415室&nbsp;</td>
+            <td height="26" class="normal" align="right">邮　　编：</td>
+            <td height="26" class="normal">200439&nbsp;</td>
+          </tr>
+          <tr> 
+            <td height="26" class="normal" align="right">公司性质：</td>
+            <td height="26" class="normal">中小企业（民营/私营/个体等）
+            </td>
+            <td height="26" class="normal" align="right">所属行业：</td>
+            <td height="26" class="normal">信息、咨询服务业
+            </td>
+          </tr>
+          <tr> 
+            <td class="normal" align="center">
+			<p align="right">公司简介：</p></td>
+            <td class="normal" colspan="3"><p style="text-indent: 26">苏州恩普诺信息科技有限公司（下简称“恩普诺”）是成立于2015年，现主要从事ERP（企业资源计划）系统相关的咨询、实施、IT监理及IT服务等全方位支持。同时也是IFS 艾菲诗公司在中国地区重要合作伙伴。<br>
+恩普诺目前拥有超过20多位顾问团队，基于管理团队人员十余年的信息化管理经验，专注于汽车及零部件、工业制造、流程制造、高科技制造、服务提供商等细分行业。<br>
+公司致力于为企业提供信息化建设的整体解决方案，主要咨询和实施的内容包括：企业资源计划（ERP）、供应链管理（SCM）、客户关系管理（CRM）、商业智能分析（BI）、办公自动化（OA）、人力资源管理（HR）等。构筑和维护为上述企业活动提供服务支持，使企业获得更强的业务洞察力，并帮助他们从容面对未来的挑战与变革为目标。<br>
+<br>
+公司理念<br>
+- 通过科学的咨询方法，向企业提供管理咨询、ERP实施服务及企业信息化的整体解决方案，以提升企业的管理水平、增强企业的核心能力，帮助企业成功。<br>
+- 给员工提供有竞争力的薪水以及弹性工作机制，打造积极向上，团结精干的企业文化<br>
+<br>
+<br>
+上海办公地点：上海市宝山区长江南路180号长江软件园（地铁3号线长江南路站）<br>
+</p></td>
+          </tr>
+        </tbody></table>
+        <table width="95%" border="1" cellspacing="4" cellpadding="0" bordercolor="#E1F0FF">
+          <tbody><tr> 
+            <td height="30" colspan="4" align="center" class="notitle" bgcolor="#E1F0FF"><strong>职位资料</strong></td>
+          </tr>
+          <tr> 
+            <td width="14%" height="26" class="normal" align="center">职 位　名 称：</td>
+            <td width="35%" height="26" class="normal">Asp.net 程序员</td>
+            <td width="14%" height="26" class="normal" align="center"><span style="letter-spacing: 2pt">职位类别：</span></td>
+            <td width="37%" height="26" class="normal">全职</td>
+          </tr>
+          
+            <td height="26" class="normal" align="center">要 求　专 业：</td>
+            <td height="26" class="normal">计算机相关专业&nbsp;</td>
+            <td height="26" class="normal" align="center"><span style="letter-spacing: 2pt">要求学历：</span></td>
+            <td height="26" class="normal">本科&nbsp;</td>
+          </tr>
+          <tr> 
+            <td height="26" class="normal" align="center">外 语　要 求：</td>
+            <td height="26" class="normal">良好&nbsp;</td>
+            <td height="26" class="normal" align="center">计算机要求：</td>
+            <td height="26" class="normal">精通&nbsp;</td>
+          </tr>
+          <tr> 
+            <td height="26" class="normal" align="center">其他外语要求：</td>
+            <td height="26" class="normal" colspan="3">&nbsp;</td>
+          </tr>
+          <tr> 
+            <td height="26" class="normal" align="center">职 位　描 述：</td>
+            <td height="26" class="normal" colspan="3"><p style="text-indent: 26">岗位职责：<br>
+1. 参与需求调研和需求分析；<br>
+2. 完成指定模块基础功能的开发； <br>
+3. 公司组织技术培训时能积极响应。<br>
+<br>
+任职资格：<br>
+1. 计算机相关专业，本科以上学历；<br>
+2. 熟练掌握ASP.NET,HTML,CSS,JavaScript；<br>
+3. 要会使用SQl Server、Oracle（两者要会其一)，能编写简单的存储过程；<br>
+4. 具备良好的开发习惯和开发规范，有较强的责任心，工作细致，逻辑推理强；<br>
+5. 良好的团队合作能力，能吃苦耐劳；<br>
+6. 同时有Java开发能力的可优先考虑；<br>
+7. 英语4级及以上的可优先考虑；<br>
+8. 有计算机编程、系统、数据库等相关证书的可优先考虑。<br>
+<br>
+上海办公地点：上海市宝山区长江南路180号长江软件园（地铁3号线长江南路站）<br>
+</p></td>
+          </tr>
+        </tbody></table>
+		  
+		<p class="normal">
+        <table width="95%" border="0" cellspacing="2" cellpadding="0">
+		  <form name="formApplication" method="post" action="AddApplication.asp"></form>
+          <tbody><tr>
+            <td class="normal" align="center"><input type="hidden" name="TposiID" value="9008"><input type="submit" name="Submit" value=" 申 请 ">&nbsp; <input type="button" name="Submit2" value=" 打 印 " onclick="javascript:window.print()">&nbsp; <input type="button" name="Submit3" value="关闭窗口" onclick="javascript:window.close()"></td>
+          </tr>
+          
+        </tbody></table>
+        </p></td>
+      </tr>
+    </tbody></table>
+    
+    </td>
+    <td width="5"></td>
+  </tr>
+</tbody></table>
+</div>
+    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <!-- Footer line -->
+    <div id="footer">
+        <div class="wrapper">Copyright © 2019 上海龙之志有限公司  <!-- <a href="#" target="_blank" title="拆包大厅">拆包大厅</a> --> | <a href="#" target="_blank" title="平台动态">平台动态</a> | <a href="#" target="_blank">投诉及建议</a></div>
+    </div>
+
+</div>
+
+<div class="clear"></div>
+
+</body>
+</html>

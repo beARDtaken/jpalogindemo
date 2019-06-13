@@ -1,0 +1,524 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<title>首页</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/spinner/ui.spinner.js"></script>
+<script type="text/javascript" src="js/plugins/spinner/jquery.mousewheel.js"></script>
+
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/charts/excanvas.min.js"></script>
+<script type="text/javascript" src="js/plugins/charts/jquery.flot.js"></script>
+<script type="text/javascript" src="js/plugins/charts/jquery.flot.orderBars.js"></script>
+<script type="text/javascript" src="js/plugins/charts/jquery.flot.pie.js"></script>
+<script type="text/javascript" src="js/plugins/charts/jquery.flot.resize.js"></script>
+<script type="text/javascript" src="js/plugins/charts/jquery.sparkline.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/forms/uniform.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.cleditor.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.validationEngine-en.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.tagsinput.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/autogrowtextarea.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.dualListBox.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.inputlimiter.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/chosen.jquery.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/wizard/jquery.form.js"></script>
+<script type="text/javascript" src="js/plugins/wizard/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/plugins/wizard/jquery.form.wizard.js"></script>
+
+<script type="text/javascript" src="js/plugins/uploader/plupload.js"></script>
+<script type="text/javascript" src="js/plugins/uploader/plupload.html5.js"></script>
+<script type="text/javascript" src="js/plugins/uploader/plupload.html4.js"></script>
+<script type="text/javascript" src="js/plugins/uploader/jquery.plupload.queue.js"></script>
+
+<script type="text/javascript" src="js/plugins/tables/datatable.js"></script>
+<script type="text/javascript" src="js/plugins/tables/tablesort.min.js"></script>
+<script type="text/javascript" src="js/plugins/tables/resizable.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/ui/jquery.tipsy.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.collapsible.min.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.progress.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.timeentry.min.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.colorpicker.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.jgrowl.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.breadcrumbs.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.sourcerer.js"></script>
+
+<script type="text/javascript" src="js/plugins/calendar.min.js"></script>
+<script type="text/javascript" src="js/plugins/elfinder.min.js"></script>
+
+<script type="text/javascript" src="js/custom.js"></script>
+
+<script type="text/javascript" src="js/charts/chart.js"></script>
+<script src="js/myself.js"></script>
+
+<!-- Shared on MafiaShare.net  --><!-- Shared on MafiaShare.net  --></head>
+
+<body>
+
+<!-- Left side content -->
+<div id="leftSide">
+    <div class="logo"><a href="#"><img src="images/logo1.png" alt="" width="150px"/></a></div>
+    
+    <div class="sidebarSep mt0"></div>
+    
+    <!-- Search widget -->
+    <form action="http://localhost:8080/check" class="sidebarSearch">
+        <input type="text" name="search" placeholder="搜索..." id="ac" />
+        <input type="submit" value="" />
+    </form>
+    
+    <div class="sidebarSep"></div>
+
+    <!-- Next update progress widget -->
+    <div class="nextUpdate">
+        <!-- <ul>
+            <li>下次更新时间在:</li>
+            <li>23 小时 14 分</li>
+        </ul> -->
+        <div class="pWrapper"><div class="progressG" title="78%"></div></div>
+    </div>
+    
+    <div class="sidebarSep"></div>
+    
+    <!-- Left navigation -->
+    <ul id="menu" class="nav">
+        <li class="dash"><a href="http://localhost:8080/index" title="" class="active"><span>首页</span></a></li>
+        <li class="charts"><a href="" title="" class="exp"><span>用户管理</span></a>
+          <ul class="sub">
+              <li><a href="http://localhost:8080/stu2" title="">个人资料</a></li>
+              <!-- <li><a href="门票管理.html" title="">门票券管理</a></li>
+              <li><a href="我的团队.html" title="">伞下的成员</a></li>
+              <li><a href="#" title="">注册下线会员</a></li>
+              <li class="last"><a href="#" title="">注销登录账号</a></li> -->
+          </ul>
+      	</li>
+        <li class="forms"><a href="http://localhost:8080/stu3" title="" class="exp"><span>个人考勤</span><strong></strong></a>
+            <ul class="sub">
+                <li><a href="http://localhost:8080/stu3" title="">考勤资料</a></li>
+            </ul>
+            <!-- <ul class="sub">
+                <li><a href="提供帮助记录.html" title="">提供帮助记录</a></li>
+                <li><a href="接受帮助记录.html" title="">接受帮助记录</a></li>
+                <li><a href="团队信息记录.html" title="">团队信息记录</a></li>
+                <li><a href="提供帮助所得利息.html" title="">提供帮助所得利息</a></li>
+                <li class="last"><a href="经理奖钱包记录.html" title="">经理奖钱包记录</a></li>
+            </ul> -->
+        </li>
+        <li class="ui"><a href="#" title="" class="exp"><span>实习任务</span></a>
+            <ul class="sub">
+                <li><a href="http://localhost:8080/stu4" title="">实习公司</a></li>
+                <li><a href="http://localhost:8080/stu4" title="">实习要求</a></li>
+                <!-- <li><a href="我的钱包.html" title="">推荐：￥150</a></li>
+                <li class="last"><a href="我的钱包.html" title="">积分：0分</a></li> -->
+            </ul>
+        </li>
+        <li class="tables"><a href="" title="" class="exp"><span>情况汇报</span><strong></strong></a>
+            <ul class="sub">
+                <li><a href="" title="http://localhost:8080/echarts3">周报</a></li>
+                <li><a href="http://localhost:8080/echarts3" title="">月总结</a></li>
+                <!-- <li class="last"><a href="我的资料.html" title="">手机：18200000000</a></li> -->
+            </ul>
+        </li>
+        <!-- <li class="widgets"><a href="#" title="" class="exp"><span>拆包大厅</span><strong></strong></a></li> -->
+    </ul>
+</div>
+
+
+<!-- Right side -->
+<div id="rightSide">
+
+    <!-- Top fixed navigation -->
+    <div class="topNav">
+        <div class="wrapper">
+            <div class="welcome"><a href="#" title=""><img src="images/userPic.png" alt="" /></a><span th:text="${msg}"></span></div>
+            <div class="userNav">
+                <ul>
+                    <li><a href="#" title=""><img src="images/icons/topnav/profile.png" alt="" /><span>个人中心</span></a></li>
+                    <li><a href="#" title=""><img src="images/icons/topnav/tasks.png" alt="" /><span>任务</span></a></li>
+                    <li class="dd"><a title=""><img src="images/icons/topnav/messages.png" alt="" /><span>消息</span><span class="numberTop">8</span></a>
+                        <ul class="userDropdown">
+                            <li><a href="#" title="" class="sAdd">new message</a></li>
+                            <li><a href="#" title="" class="sInbox">inbox</a></li>
+                            <li><a href="#" title="" class="sOutbox">outbox</a></li>
+                            <li><a href="#" title="" class="sTrash">trash</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="#" title=""><img src="images/icons/topnav/settings.png" alt="" /><span>设置</span></a></li> -->
+                    <li><a href="#" title=""><img src="images/icons/topnav/logout.png" alt="" /><span>退出</span></a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    
+    <!-- Responsive header -->
+    <div class="resp">
+        <div class="respHead">
+            <a href="#" title=""><img src="images/loginLogo.png" alt="" /></a>
+        </div>
+        
+        <div class="cLine"></div>
+        <div class="smalldd">
+            <span class="goTo"><img src="images/icons/light/home.png" alt="" />导航</span>
+            <ul class="smallDropdown">
+                <li><a href="#" title=""><img src="images/icons/light/home.png" alt="" />Dashboard</a></li>
+                <li><a href="#" title=""><img src="images/icons/light/stats.png" alt="" />Statistics and charts</a></li>
+                <li><a href="#" title="" class="exp"><img src="images/icons/light/pencil.png" alt="" />Forms stuff<strong>4</strong></a>
+                    <ul>
+                        <li><a href="#" title="">Form elements</a></li>
+                        <li><a href="#" title="">Validation</a></li>
+                        <li><a href="#" title="">WYSIWYG and file uploader</a></li>
+                        <li class="last"><a href="#" title="">Wizards</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title=""><img src="images/icons/light/users.png" alt="" />Interface elements</a></li>
+                <li><a href="#" title="" class="exp"><img src="images/icons/light/frames.png" alt="" />Tables<strong>3</strong></a>
+                    <ul>
+                        <li><a href="#" title="">Static tables</a></li>
+                        <li><a href="#" title="">Dynamic table</a></li>
+                        <li class="last"><a href="#" title="">Sortable &amp; resizable tables</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title="" class="exp"><img src="images/icons/light/fullscreen.png" alt="" />Widgets and grid<strong>2</strong></a>
+                    <ul>
+                        <li><a href="#" title="">Widgets</a></li>
+                        <li class="last"><a href="#" title="">Grid</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title="" class="exp"><img src="images/icons/light/alert.png" alt="" />Error pages<strong>6</strong></a>
+                    <ul class="sub">
+                        <li><a href="#" title="">403 page</a></li>
+                        <li><a href="#" title="">404 page</a></li>
+                        <li><a href="#" title="">405 page</a></li>
+                        <li><a href="#" title="">500 page</a></li>
+                        <li><a href="#" title="">503 page</a></li>
+                        <li class="last"><a href="#" title="">Website is offline</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title=""><img src="images/icons/light/files.png" alt="" />File manager</a></li>
+                <li><a href="#" title="" class="exp"><img src="images/icons/light/create.png" alt="" />Other pages<strong>3</strong></a>
+                    <ul>
+                        <li><a href="#" title="">Typography</a></li>
+                        <li><a href="#" title="">Calendar</a></li>
+                        <li class="last"><a href="#" title="">Gallery</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="cLine"></div>
+    </div>
+    
+    <!-- Title area -->
+    <div class="titleArea">
+        <div class="wrapper">
+            <div class="pageTitle">
+                <h5>实习项目</h5><br>
+                <!-- <h6>分享财富（T-4）</h6> -->
+                <span>实习者：<b th:text="${name}">&nbsp;&nbsp;</b> 所属地区：&nbsp;<b>上海市奉贤区&nbsp;&nbsp;</b> 所属学校：&nbsp;<b th:text="${school}">上海商学院&nbsp;&nbsp;</b> 日期：&nbsp;<b id = 'date'>2019-05-22 13：20</b></span>
+            </div>
+            <div class="middleNav">
+                <ul>
+                   <!-- <li class="mUser"><a title=""><span class="users"></span></a>
+                        <ul class="mSub1">
+                            <li><a href="#" title="">Add user</a></li>
+                            <li><a href="#" title="">Statistics</a></li>
+                            <li><a href="#" title="">Orders</a></li>
+                        </ul>
+                    </li>
+                    <li class="mMessages"><a title=""><span class="messages"></span></a>
+                        <ul class="mSub2">
+                            <li><a href="#" title="">New tickets<span class="numberRight">8</span></a></li>
+                            <li><a href="#" title="">Pending tickets<span class="numberRight">12</span></a></li>
+                            <li><a href="#" title="">Closed tickets</a></li>
+                        </ul>
+                    </li>
+                    <li class="mFiles"><a href="#" title="Or you can use a tooltip" class="tipN"><span class="files"></span></a></li>
+                    <li class="mOrders"><a title=""><span class="orders"></span><span class="numberMiddle">8</span></a>
+                        <ul class="mSub4">
+                            <li><a href="#" title="">Pending uploads</a></li>
+                            <li><a href="#" title="">Statistics</a></li>
+                            <li><a href="#" title="">Trash</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    
+    <div class="line" style="display:none;"></div>
+    
+    <!-- Page statistics and control buttons area -->
+    <div class="statsRow" style="display:none;">
+        <div class="wrapper">
+        	<div class="controlB">
+            	<ul>
+                	<li><a href="#" title=""><img src="images/icons/control/32/plus.png" alt="" /><span>Add new session</span></a></li>
+                    <li><a href="#" title=""><img src="images/icons/control/32/database.png" alt="" /><span>New DB entry</span></a></li>
+                    <li><a href="#" title=""><img src="images/icons/control/32/hire-me.png" alt="" /><span>Add new user</span></a></li>
+                    <li><a href="#" title=""><img src="images/icons/control/32/statistics.png" alt="" /><span>Check statistics</span></a></li>
+                    <li><a href="#" title=""><img src="images/icons/control/32/comment.png" alt="" /><span>Review comments</span></a></li>
+                    <li><a href="#" title=""><img src="images/icons/control/32/order-149.png" alt="" /><span>Check orders</span></a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="line"></div>
+    
+    <!-- Main content wrapper -->
+    <div class="wrapper">
+    
+        <!-- Note -->
+        <div class="nNote nInformation hideit">
+            <p>亲爱的&nbsp;&nbsp;<strong th:text="${name}"></strong ><p th:text="${school}"> </p><strong>20 </strong>次，考勤 <strong>10 </strong>次</p>
+        </div>
+        <!-- Widgets -->
+        <div class="widgets">
+
+        	<!-- 2 columns widgets -->
+            <div class="oneTwo">
+            
+                <!-- Search -->
+                <div class="searchWidget">
+                    <form action="">
+                        <input type="text" name="search" placeholder="Enter search text..." />
+                        <input type="submit" name="find" value="" />
+                    </form>
+                </div>
+            
+                <!-- Purchase info widget -->
+                <div class="widget">
+                    <div class="title">
+                    	<img src="images/icons/dark/money.png" alt="" class="titleIcon" />
+                        <h6>实习任务</h6>
+                        <div class="topIcons">
+                            <a href="#" class="tipS" title="Download statement"><img src="images/icons/downloadTop.png" alt="" /></a>
+                            <a href="#" class="tipS" title="Print invoice"><img src="images/icons/printTop.png" alt="" /></a>
+                            <a href="#" class="tipS" title="Edit"><img src="images/icons/editTop.png" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="newOrder">
+                        <div class="userRow">
+                            <a href="#" title=""><img src="images/user.png" alt="" class="floatL" /></a>
+                            <ul class="leftList">
+                                <li><a href="#" title=""><strong>实习公司简介</strong></a></li>
+                                <li>Company Profile:</li>
+                            </ul>
+                            <ul class="rightList">
+                                <li>公司：<a href="#" title=""><strong>上海龙弈信息科技有限公司</strong></a></li>
+                                <li>职位：<a href="#" title=""><strong>前端开发工程师</strong></a></li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                    
+                        <div class="cLine"></div>
+                        
+                        <div class="orderRow">
+                            <ul class="leftList">
+                                <li><strong>实习要求:</strong></li>
+                                <li>遵守公司考勤制度和作息时间安排，到岗离岗需提前沟通。
+工作地点：上海，浦东，张江，盛夏路500号1号楼5楼
+实习待遇：本科生250元/天，研究生300元/天
+实习期表现优秀者提供正式工作机会......</li>
+                            </ul>
+                            <!-- <ul class="rightList">
+                                <li><strong>0</strong>天收益+0</li>
+                                <li><strong class="green">未转出</strong></li>
+                                <li><strong class="orange">您已获得2.2%-X日息  </strong>(可以提现)</li>
+                            </ul> -->
+                            <div class="clear"></div>
+                        </div>
+                        
+                        <div class="cLine"></div>
+                        <!-- <div class="totalAmount"><h6 class="floatL blue">交易成功</h6><div class="num" style="margin:0;"><a href="#" class="blueNum">提现</a></div><div class="clear"></div></div> -->
+                    </div>
+                </div>                
+                <!-- Purchase info widget -->
+                <div class="widget">
+                    <div class="title">
+                    	<img src="images/icons/dark/money.png" alt="" class="titleIcon" />
+                        <h6>个人考勤</h6>
+                        <div class="topIcons">
+                            <a href="#" class="tipS" title="Download statement"><img src="images/icons/downloadTop.png" alt="" /></a>
+                            <a href="#" class="tipS" title="Print invoice"><img src="images/icons/printTop.png" alt="" /></a>
+                            <a href="#" class="tipS" title="Edit"><img src="images/icons/editTop.png" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="newOrder">
+                        <div class="userRow">
+                            <a href="#" title=""><img src="images/user.png" alt="" class="floatL" /></a>
+                            <ul class="leftList">
+                                <li><a href="#" title=""><strong>开始时间：</strong></a></li>
+                                <li>2019-05-21 09:01:02</li>
+                            </ul>
+                            <!-- <ul class="rightList">
+                                <li>提供金额：<a href="#" title=""><strong>￥1000</strong></a></li>
+                            </ul> -->
+                            <div class="clear"></div>
+                        </div>
+                    
+                        <div class="cLine"></div>
+                        
+                        <div class="orderRow">
+                            <ul class="leftList">
+                                <h6 class="floatL blue">已打卡次数：</h6>
+								<!-- <h6 class="floatl blue num" style="margin: 0px 25px 0 0;">6次</h6> -->
+                                <!-- <li>接受会员:</li> -->
+                            </ul>
+                            <ul class="rightList pays">
+                                <!-- <li><i class="icons bank" title="银行支付"></i><i class="icons alipay ml7" title="支付宝支付"></i><i class="icons wechat ml7" title="微信支付"></i><i class="icons line1 ml7" title="线下同城支付"></i></li> -->
+                                <li><strong class="blue" style="margin: 0px 25px 0 0;">6次</strong></li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                        
+                        <div class="cLine"></div>
+                        <div class="totalAmount"><h6 class="floatL blue">未打卡次数：</h6>
+                        	<!-- <div class="num" style="margin: 0px 8px 0 0;"><a href="#" class="blueNum">留言</a></div>
+                        	<div class="num" style="margin: 0px 8px 0 0;"><a href="#" class="blueNum">详细资料</a></div> -->
+                        	<!-- <div class="num" style="margin: 0px 8px 0 0;"><a href="#" class="blueNum">1次</a></div> -->
+							<h6 class="floatL  num" style="margin: 0px 25px 0 0;color: firebrick;">1次</h6>
+                        	<div class="clear"></div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="clear"></div>
+
+            </div>
+            <div class="oneTwo">
+                <!-- New users widget -->
+                <div class="widget">
+                    <div class="title"><img src="images/icons/dark/add.png" alt="" class="titleIcon" /><h6>用户管理</h6></div>
+                    <div class="wUserInfo">
+                        <a href="#" title="" class="wUserPic"><img src="images/user.png" alt="" /></a>
+                        <ul class="leftList">
+                            <li><a href="#" title=""><strong>基本信息</strong></a></li>
+                            <li><a href="#" title="">General Information</a></li>
+                        </ul>
+                        <ul class="rightList">
+                            <li><a href="#" class="green"><strong th:text="${name}"></strong></a></li>
+                            <li><a href="#" class="red" th:text="${school}"></a></li>
+                        </ul>
+                        <div class = "clear"></div>
+                    </div>
+                    
+                    <div class="cLine"></div>
+                    
+                    <div class="wUserInfo">
+                        <a href="#" title="" class="wUserPic"><img src="images/user.png" alt="" /></a>
+                        <ul class="leftList">
+                            <li><a href="#" title=""><strong>账户密码</strong></a></li>
+                            <li><a href="#" title="">Account Password</a></li>
+                        </ul>
+                        <ul class="rightList">
+                            <li><a href="#" class="green"><strong th:text="${id}"></strong></a></li>
+                            <li><a href="#" class="red">更改密码</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    
+                    <div class="cLine"></div>
+                    
+                    <div class="wUserInfo">
+                        <a href="#" title="" class="wUserPic"><img src="images/user.png" alt="" /></a>
+                        <ul class="leftList">
+                            <li><a href="#" title=""><strong>上传头像</strong></a></li>
+                            <li><a href="#" title="">Head Sculpture</a></li>
+                        </ul>
+                        <ul class="rightList">
+                            <li><a href="#" class="green"><strong> &nbsp;</strong></a></li>
+                            <li><a href="#" class="red">上传</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    
+                    <div class="cLine"></div>
+                    
+                    <!-- <div class="wUserInfo">
+                        <a href="#" title="" class="wUserPic"><img src="images/user.png" alt="" /></a>
+                        <ul class="leftList">
+                            <li><a href="#" title=""><strong>周六</strong></a></li>
+                            <li><a href="#" title="">steve@186.com</a></li>
+                        </ul>
+                        <ul class="rightList">
+                            <li><a href="#" class="green"><strong>$2,483.02</strong></a></li>
+                            <li><a href="#" class="red">0 周期</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div> -->
+                </div>
+                
+                <!-- Latest update widget -->
+                <div class="widget">
+                    <div class="title"><img src="images/icons/dark/refresh4.png" alt="" class="titleIcon" /><h6>情况汇报</h6></div>
+                    
+                    <div class="updates">
+                    	<div class="newUpdate">
+                            <div class="uDone">
+                                <a href="#" title=""><strong>日志</strong></a>
+                                <span><a href="">日志撰写</a></span>
+                            </div>
+                            <div class="uDate"><span class="uDay">26</span>May</div>
+                            <div class="clear"></div>
+                        </div>
+                        
+                    	<div class="newUpdate">
+                            <span class="uDone">
+                                <a href="#" title=""><strong>周报</strong></a>
+                                <span><a href="">周报撰写</a></span>
+                            </span>
+                            <span class="uDate"><span class="uDay">20</span>May</span>
+                            <div class="clear"></div>
+                        </div>
+                        
+                    	<div class="newUpdate">
+                            <span class="uDone">
+                                <a href="#" title=""><strong>月总结</strong></a>
+                                <span><a href="">月总结撰写</a></span>
+                            </span>
+                            <span class="uDate"><span class="uDay">01</span>May</span>
+                            <div class="clear"></div>
+                        </div>
+                        
+                    	<!-- <div class="newUpdate">
+                            <span class="uNotice">
+                                <a href="#" title=""><strong>新闻测试</strong></a>
+                                <span>非常dyplomatic和灵活的销售经理</span>
+                            </span>
+                            <span class="uDate"><span class="uDay">06</span>feb</span>
+                            <div class="clear"></div>
+                        </div> -->
+                        
+                    </div>
+                </div>
+            </div>
+        
+            <div class="clear"></div>
+        </div>
+    </div>
+    
+    <!-- Footer line -->
+    <div id="footer">
+        <div class="wrapper">Copyright © 2019 上海龙之志有限公司  <!-- <a href="#" target="_blank" title="拆包大厅">拆包大厅</a> --> | <a href="#" target="_blank" title="平台动态">平台动态</a> | <a href="#" target="_blank">投诉及建议</a></div>
+    </div>
+
+</div>
+
+<div class="clear"></div>
+
+</body>
+</html>
